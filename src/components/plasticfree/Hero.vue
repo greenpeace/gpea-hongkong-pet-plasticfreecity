@@ -1,44 +1,41 @@
 <template>
   <div class="hero">
     <div class="hero__content">
-      <div
-        class="text"
-        v-bind:class="{ slideup: !loading}"
-      >
-        <h1 class="display-2 mb-2 font-weight-bold text-white">全城走塑<br />讓香港不一樣</h1>
+      <div class="text" v-bind:class="{ slideup: !loading}">
+        <h1 class="text-white display-2 mb-2">
+          全城走塑
+          <br />讓香港不一樣
+        </h1>
         <h4 class="text-white font-weight-bold">2019年，多1倍店鋪、學校走塑</h4>
-        <p class="mb-2 text-white lead">塑膠圍城，香港塑膠污染問題日益嚴峻。<br />無論你想在餐廳、學校、商舖，或日常生活中走塑，只要大家一齊努力，每個人少用即棄塑膠，聚沙成塔，就可以讓香港變得不一樣！<br /><strong>全城走塑，立即行動！</strong></p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfyhY0wTqn0JdMjjvEUFS4yBQ31G0KHXhDsvZ1lUiR-XDFFQQ/viewform"
-          target="_blank"
-        >
-          <button class="btn main-btn">義工登記</button>
-        </a>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSftxg-EbQSAl44hf_5g1-fVt4DJVlCjwJrEGuKxVdhM2J9aHg/viewform"
-          target="_blank"
-        >
-          <button class="btn main-btn">店鋪登記</button>
-        </a>
+        <p class="lead">塑膠圍城，香港塑膠污染問題日益嚴峻。</p>
+        <p class="lead">無論你想在餐廳、學校、商舖，或日常生活中走塑，只要大家一齊努力，每個人少用即棄塑膠，聚沙成塔，就可以讓香港變得不一樣！</p>
+        <p class="lead">
+          <strong>全城走塑，立即行動！</strong>
+        </p>
+        <div class="mt-2">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfyhY0wTqn0JdMjjvEUFS4yBQ31G0KHXhDsvZ1lUiR-XDFFQQ/viewform"
+            target="_blank"
+          >
+            <button class="btn main-btn">義工登記</button>
+          </a>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSftxg-EbQSAl44hf_5g1-fVt4DJVlCjwJrEGuKxVdhM2J9aHg/viewform"
+            target="_blank"
+          >
+            <button class="btn main-btn">店鋪登記</button>
+          </a>
+        </div>
       </div>
     </div>
-    <div
-      class="hero__background"
-      v-bind:class="{ fade: !loading}"
-    >
-      <div
-        class="wrapper restaurant-dot"
-        v-scroll-to="'#restaurant-list'"
-      >
+    <div class="hero__background" v-bind:class="{ fade: !loading}">
+      <div class="wrapper restaurant-dot" v-scroll-to="'#restaurant-list'">
         <div class="ring"></div>
         <div class="dot"></div>
         <span class="dot-title">走塑食堂</span>
       </div>
 
-      <div
-        class="wrapper school-dot"
-        v-scroll-to="'#school-list'"
-      >
+      <div class="wrapper school-dot" v-scroll-to="'#school-list'">
         <div class="ring"></div>
         <div class="dot"></div>
         <span class="dot-title">走塑校園</span>
