@@ -1,0 +1,111 @@
+$font-header: Microsoft YaHei,
+Microsoft JhengHei,
+LiHei Pro,
+PingFang TC,
+Heiti TC,
+Helvetica,
+Arial,
+sans-serif;
+$font-content: Microsoft JhengHei,
+Microsoft YaHei,
+PingFang TC,
+Heiti TC,
+Helvetica,
+Arial,
+sans-serif;
+$font-stack: Microsoft JhengHei,
+Microsoft YaHei,
+PingFang TC,
+Heiti TC,
+Helvetica,
+Arial,
+sans-serif;
+$font-heebo: "Heebo",
+"Noto Sans TC",
+"Noto Sans SC",
+微軟正黑體,
+Microsoft JhengHei,
+STHeiti,
+华文黑体,
+SimHei,
+黑体,
+新細明體,
+PMingLiU,
+細明體,
+MingLiU,
+sans-serif;
+$font-default: PingFang TC,
+Heiti TC,
+LiHei Pro,
+Microsoft JhengHei,
+Microsoft YaHei,
+Helvetica,
+Arial,
+sans-serif;
+
+//
+body {
+  font-family: $font-content;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Font size and family
+// pixel based fallback, font-size: 16px, font-size: 1rem
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-header;
+}
+
+p,
+input,
+select,
+label,
+button {
+  font-family: $font-content;
+  background: transparent;
+  color: inherit;
+}
+
+// Default
+input,
+select,
+textarea {
+  font-size: 16px !important;
+}
+
+button {
+  border: none;
+  outline: none;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #bbb;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #bbb;
+}
+
+:-ms-input-placeholder {
+  color: #bbb;
+}

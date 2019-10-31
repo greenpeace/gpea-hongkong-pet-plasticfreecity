@@ -1,18 +1,39 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <hero />
+    <!-- Hero -->
+    <landing />
+    <!-- List -->
+    <restaurant-list />
+    <!-- Map -->
+    <plastic-map />
+    <!-- storygrid -->
+    <story-grid />
+    <!-- Entity -->
+    <entity-list />
+    <!-- Partners -->
+    <partners />
   </div>
 </template>
-
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Landing from "@/components/plasticfree/Landing.vue";
+import Hero from "@/components/plasticfree/Hero.vue";
+import PlasticMap from "@/components/plasticfree/Map.vue";
+import EntityList from "@/components/plasticfree/EntityList.vue";
+import RestaurantList from "@/components/plasticfree/RestaurantList.vue";
+import StoryGrid from "@/components/plasticfree/StoryGrid.vue";
+import Partners from "@/components/plasticfree/Partners.vue";
 export default {
-  name: 'home',
+  name: "home",
   components: {
-    HelloWorld
+    Landing,
+    Hero,
+    PlasticMap,
+    EntityList,
+    RestaurantList,
+    StoryGrid,
+    Partners
   }
-}
+};
 </script>

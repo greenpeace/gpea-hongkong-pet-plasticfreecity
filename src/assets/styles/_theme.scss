@@ -1,0 +1,114 @@
+.text-forest {
+  color: $wod-forest;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-gray {
+  color: #666;
+}
+
+.text-blue {
+  color: $wod-blue;
+}
+
+.text-light-blue {
+  color: $wod-light-blue;
+}
+
+header {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.btn {
+  margin-bottom: 2rem;
+}
+
+.form {
+  color: #000;
+}
+
+.header {
+  &__image {
+    img {
+      width: 100%;
+      max-width: 220px;
+    }
+  }
+}
+
+.consent {
+  line-height: 1;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.wrap {
+  display: none;
+  width: 100%;
+  max-height: 500px;
+  margin-top: 10px;
+  z-index: 10;
+  position: absolute;
+}
+
+.signup__btn {
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: $wod-green;
+  border-color: $wod-green;
+  text-align: center;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  line-height: 1.7;
+}
+
+.ty__btn {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  text-align: center;
+  outline: none;
+  border: none;
+
+  &--facebook {
+    background-color: $facebook;
+    color: #fff;
+  }
+
+  &--whatsapp {
+    background-color: $whatsapp;
+    color: #fff;
+    display: none;
+  }
+
+  &--donation {
+    background-color: #ff6600;
+    color: #fff;
+  }
+
+  &--chatbot {
+    background-color: #0084ff;
+    color: #fff;
+  }
+}
+
+.phone {
+  .ty__btn {
+    display: inline-block;
+  }
+}

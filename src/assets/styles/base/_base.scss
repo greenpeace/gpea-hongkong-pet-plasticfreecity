@@ -1,0 +1,122 @@
+/*
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+*/
+
+:root {
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --greenpeace-green: #66cc00;
+  --invalid: #ff6666;
+  --bg-gray: #f9f9f9;
+  --text-gray: #666;
+  --text-gray-light: #eee;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+// root variables
+* {
+  border-radius: 0;
+  border: none;
+  outline: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visible {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  z-index: 1;
+  height: auto;
+  transition: opacity .35s ease;
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: -999;
+  transition: opacity 0s ease;
+}
+
+::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #bbb;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #bbb;
+}
+
+:-ms-input-placeholder {
+  color: #bbb;
+}
+
+// select, input, button{
+// 	outline: none;
+// }
+:focus:not(.focus-ring) {
+  outline: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="email"],
+select {
+  &:focus {
+    outline: none;
+  }
+}
+
+button:disabled {
+  cursor: default !important;
+}
