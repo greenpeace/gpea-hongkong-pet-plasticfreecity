@@ -1,7 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" class="no-js">
   <head>
-    <!-- Google Tag Manager -->
+    <script>
+      window.dataLayer = window.dataLayer || []
+    </script>
+    <script>
+      dataLayer.push({
+        officeName: 'Hong Kong',
+        gBasket: 'Good Life',
+        gCampaign: 'Plastics Free Future',
+        gScope: 'Global',
+        gDepartment: 'Campaign',
+      })
+    </script>
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <script>
+      ;(function(a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y
+        h.end = i = function() {
+          s.className = s.className.replace(RegExp(' ?' + y), '')
+        }
+        ;(a[n] = a[n] || []).hide = h
+        setTimeout(function() {
+          i()
+          h.end = null
+        }, c)
+      })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+        'GTM-M6LZL75': true,
+      })
+    </script>
     <script>
       ;(function(w, d, s, l, i) {
         w[l] = w[l] || []
@@ -12,9 +43,8 @@
         j.async = true
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
         f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-NBV2LPD')
+      })(window, document, 'script', 'dataLayer', 'GTM-M6LZL75')
     </script>
-    <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -66,6 +96,26 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+    ></script>
+    <style>
+      .slick-track {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .slick-slide {
+        cursor: move; /* fallback if grab cursor is unsupported */
+        cursor: grab;
+        min-height: 1px;
+        opacity: 0.55;
+        transition: all 0.3s ease-in-out;
+      }
+      .slick-center {
+        opacity: 1;
+      }
+    </style>
   </head>
 
   <body>
@@ -145,22 +195,6 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
     ></script>
-    <style>
-      .slick-track {
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-      .slick-slide {
-        cursor: move; /* fallback if grab cursor is unsupported */
-        cursor: grab;
-        min-height: 1px;
-        opacity: 0.55;
-        transition: all 0.3s ease-in-out;
-      }
-      .slick-center {
-        opacity: 1;
-      }
-    </style>
     <script type="text/javascript">
       $(document).ready(function() {
         $('.slick-toolkit').slick({

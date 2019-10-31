@@ -63,7 +63,8 @@ export default {
         sortBy: "地區"
       },
       selected: [],
-      restaurantURL: "https://api.myjson.com/bins/17g5a9",
+      restaurantURL:
+        "https://raw.githubusercontent.com/eahk/gpea-hongkong-pet-plasticfreecity/master/src/assets/csvjson.json",
       restaurantList: {
         loading: true,
         tableColumns: [

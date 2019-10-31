@@ -1,7 +1,7 @@
 module.exports = {
   publicPath:
     process.env.NODE_ENV === 'production'
-      ? 'https://api.greenpeace.org.hk/2018/wod/'
+      ? 'https://api.greenpeace.org.hk/2019/plasticfreecity/'
       : '/',
   configureWebpack: config => {
     config.output.filename = 'js/[name].js'
