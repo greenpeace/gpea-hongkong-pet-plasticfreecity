@@ -12,6 +12,7 @@
     "bootstrap": "^4.3.1",
     "bourbon": "^5.1.0",
     "core-js": "^3.3.2",
+    "dayjs": "^1.8.16",
     "jquery": "^3.4.1",
     "lodash.merge": "^4.6.2",
     "nouislider": "^13.1.5",

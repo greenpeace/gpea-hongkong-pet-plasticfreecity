@@ -23,16 +23,21 @@
           <i class="material-icons">menu</i>
         </button>
       </div>
+      <div class="header__item header__item--form-btn">
+        <form-modal></form-modal>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
 import gplogo from "@/assets/svg/gp-logo.svg";
+import FormModal from '@/components/plasticfree/FormModal'
 
 export default {
   components: {
-    gplogo
+    gplogo,
+    FormModal
   },
   data() {
     return {
@@ -45,7 +50,10 @@ export default {
     },
     openMenu() {
       this.$store.commit("toggleMenu");
-    }
+    },
+    openForm() {
+      alert('form opened');
+    },
   }
 };
 </script>
@@ -97,6 +105,10 @@ export default {
       img {
         max-width: 60px;
       }
+    }
+    &--form-btn {
+      justify-content: flex-end;
+      color: #fff;
     }
   }
 }
