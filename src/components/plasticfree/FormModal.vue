@@ -5,7 +5,7 @@
       width="500"
     >
       <template v-slot:activator="{ on }">
-        <button round v-on="on" class="btn main-btn">
+        <button v-on="on" class="btn main-btn">
           參與連署
         </button>
       </template>
@@ -209,12 +209,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .main-btn {
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 1rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   font-weight: bold;
   background-color: #fff;
   color: $wod-light-blue;
+  border-radius: 25px;
 }
 .form-container {
   padding: 20px;
