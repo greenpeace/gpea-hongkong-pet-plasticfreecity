@@ -5,7 +5,8 @@
         <button v-on="on" class="btn main-btn">聯署支持</button>
       </template>
 
-      <v-card>
+      <!-- form card -->
+      <v-card v-if="!showThankYou">
         <!--
         <v-card-title class="headline" primary-title>聯署支持全城走塑</v-card-title>
         -->
@@ -79,6 +80,7 @@
               :block="true"
               @click="validate"
             >立即連署</v-btn>
+            
             <v-checkbox
               class="email-optin"
               v-model="moreInfo"
@@ -88,6 +90,25 @@
           </v-form>
         </div>
       </v-card>
+      <!-- thank you card -->
+      <transition type="fade">
+        <v-card v-if="showThankYou">
+          <v-card-text>
+            <p class="display-1 text--primary">
+              Thank you
+            </p>
+            <div class="text--primary">
+              Some text here.
+            </div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn text>
+              Share
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </transition>
+      <!-- end thank you card -->
     </v-dialog>
   </div>
 </template>
@@ -102,7 +123,7 @@ export default {
       regexEmail: new RegExp(/.+@.+\..+/),
       regexName: new RegExp(/^[\u4e00-\u9fa5_a-zA-Z_ ]{1,40}$/),
       regexPhone: new RegExp(/(^[2-9]{1}[0-9]{7}|^$)/),
-      regexMobile: new RegExp(/(^[2-9]{1}[0-9]{7}|^$)/),
+      // regexMobile: new RegExp(/(^[2-9]{1}[0-9]{7}|^$)/),
       dialog: false,
       dateMenu: false,
       // form
@@ -127,11 +148,13 @@ export default {
         v => !!v || "請輸入手提號碼",
         v =>
           this.regexPhone.test(v) ||
-          this.regexMobile.test(v) ||
+          // this.regexMobile.test(v) ||
           "手提號碼格式錯誤"
       ],
       moreInfo: true,
-      birthdayPick: "1990-01-01"
+      birthdayPick: "1990-01-01",
+      // thank you 
+      showThankYou: false,
     };
   },
   methods: {
@@ -156,7 +179,7 @@ export default {
         formData.append("supporter.NOT_TAGGED_9", "zh");
         //
         console.log(formData);
-        // console.log(this.$router.currentRoute);
+        //
         let res = await axios.post(
           "https://act.greenpeace.org/page/25142/petition/2",
           formData,
@@ -164,6 +187,9 @@ export default {
         );
         let response = res.data;
         console.log(response);
+
+        this.showThankYou = true;
+
       } catch (err) {
         console.log(err);
       }
