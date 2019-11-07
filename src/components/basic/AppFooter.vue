@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  padding: 2rem 0;
+  padding: 4rem 0;
   background-color: $wod-forest;
   background-image: url("https://api.greenpeace.org.hk/2018/wod/img/texture/texture_cta.jpg");
   background-repeat: repeat;

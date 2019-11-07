@@ -112,3 +112,15 @@ header {
     display: inline-block;
   }
 }
+
+.email-optin {
+  .v-input__slot {
+    display: flex;
+    align-items: flex-start;
+  }
+  label {
+    font-size: #666;
+    font-size: 11px;
+    line-height: 1;
+  }
+}

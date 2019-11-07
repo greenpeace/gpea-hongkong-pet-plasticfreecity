@@ -3,7 +3,10 @@
     <div class="container">
       <header class="mb-2">
         <h2 class="display-1 mb-2 text-forest font-weight-bold">走塑聯盟</h2>
-        <p class="text-black">走塑聯盟志在努力推動餐廳、學校、商店及大型活動走塑，目前為止，一共有六個團體加入了走塑聯盟。<br />如果你也擁有共同願景，歡迎加入我們！集結群眾與團體的走塑決心，一起推動雙倍的餐廳、學校加入走塑行列，帶動社會各界正視塑膠污染問題。</p>
+        <p class="text-black">
+          走塑聯盟志在努力推動餐廳、學校、商店及大型活動走塑，目前為止，一共有六個團體加入了走塑聯盟。
+          <br />如果你也擁有共同願景，歡迎加入我們！集結群眾與團體的走塑決心，一起推動雙倍的餐廳、學校加入走塑行列，帶動社會各界正視塑膠污染問題。
+        </p>
       </header>
       <div class="alliance">
         <ul class="alliance__list">
@@ -63,7 +66,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 section {
-  padding: 2rem 0 3rem;
+  padding: 4rem 0 4rem;
   background-color: $wod-gray-3;
   background-image: require("@/assets/texture/texture_organization.jpg");
   background-repeat: repeat;
@@ -76,10 +79,10 @@ header {
 }
 
 .alliance__list {
-  max-width: 900px;
+  max-width: 780px;
   margin: 0 auto;
   margin-top: 2rem;
-  padding: 0 15px;
+  padding: 20px;
   list-style: none;
   display: flex;
   justify-content: space-around;

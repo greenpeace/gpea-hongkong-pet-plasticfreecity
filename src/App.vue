@@ -4,11 +4,11 @@
       <v-app>
         <v-content>
           <v-container fluid ma-0 pa-0>
-            <AppHeader/>
+            <AppHeader />
             <!-- -->
             <router-view></router-view>
             <!-- -->
-            <AppFooter/>
+            <AppFooter />
           </v-container>
         </v-content>
       </v-app>
