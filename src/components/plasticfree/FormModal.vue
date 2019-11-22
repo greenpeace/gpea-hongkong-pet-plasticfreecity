@@ -4,12 +4,8 @@
       <template v-slot:activator="{ on }">
         <button v-on="on" class="btn main-btn">聯署支持</button>
       </template>
-
       <!-- form card -->
       <v-card v-if="!showThankYou">
-        <!--
-        <v-card-title class="headline" primary-title>聯署支持全城走塑</v-card-title>
-        -->
         <div class="form-container">
           <v-form ref="form" v-model="valid" lazy-validation>
             <v-text-field
@@ -50,7 +46,7 @@
               :large="true"
               :block="true"
               @click="validate"
-            >立即連署</v-btn>
+            >聯署支持全城走塑</v-btn>
             <v-checkbox
               class="email-optin"
               v-model="moreInfo"
@@ -64,8 +60,7 @@
       <transition type="fade">
         <v-card v-if="showThankYou">
           <v-card-text>
-            <p class="display-1 text--primary">Thank you</p>
-            <div class="text--primary">Some text here.</div>
+            <p class="display-1 text--primary">感謝您的參與！</p>
           </v-card-text>
           <v-card-actions>
             <v-btn text>Share</v-btn>

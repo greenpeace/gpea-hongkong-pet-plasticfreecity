@@ -7,7 +7,6 @@
       </header>
 
       <div class="google-map map-responsive">
-
         <iframe
           src="https://www.google.com/maps/d/embed?mid=1vAmdeSH9Py7UIp3desoLrQKSnFmwJGZZ&ll=22.301008548569072,114.17756080627441&z=12"
           width="100%"

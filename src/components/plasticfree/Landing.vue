@@ -1,62 +1,58 @@
 <template>
   <div>
-    <modal
-      :show.sync="toolkitBox.status"
-      gradient=""
-      modal-classes="modal-dialog-centered"
-    >
+    <modal :show.sync="toolkitBox.status" gradient modal-classes="modal-dialog-centered">
       <div class="py-3 text-center">
-        <img
-          :src="toolkitBox.image"
-          style="width: 100%; height: auto;"
-          alt=""
-        >
+        <img :src="toolkitBox.image" style="width: 100%; height: auto;" alt />
       </div>
-      <template slot="footer">
-      </template>
+      <template slot="footer"></template>
     </modal>
     <section class="section">
       <div class="container">
         <div class="row row-grid align-items-center">
           <div class="col-md-6 order-md-1">
-            <h2 class="text-light-blue display-1 mb-2 font-weight-bold">尋找走塑店鋪<br />建立無塑社區</h2>
+            <h2 class="text-light-blue display-1 mb-2 font-weight-bold">
+              尋找走塑店鋪
+              <br />建立無塑社區
+            </h2>
             <div class="toolkit-content mt-4">
-              <p><strong>活動背景：</strong><br />
-                針對即棄塑膠，如餐具、膠袋等污染問題<br />
-                進一步擴大「走塑店鋪」的版圖，讓更多人認識走塑食堂、店鋪，讓有心市民輕鬆走塑。</p>
-              <p>「尋找走塑食堂」計劃由2018年9月至今，已招募<strong>約150位義工參與一連串社區活動、親身與餐廳店主溝通，並找到近400間走塑友善的餐廳</strong>，在這些餐廳貼上「全城走塑」貼紙，讓消費者輕鬆認出走塑食堂。今年我們將擴大活動範圍至不同店鋪，如街市、糖果店等，希望有更多商家加入，擴大走塑版圖。</p>
-              <p><strong>我們的目標：</strong><br />2019年6月或之前，令500間餐廳成為「走塑食堂」。</p>
-              <p>你的參與會帶來改變，無塑未來由你創造！請加入義工行列，並呼籲親朋好友和我們一起尋找走塑餐廳！</p>
+              <p>
+                <strong>活動背景：</strong>
+                <br />針對即棄塑膠，如餐具、膠袋等污染問題
+                <br />進一步擴大「走塑店鋪」的版圖，讓更多人認識走塑食堂、店鋪，讓有心市民輕鬆走塑。
+              </p>
+              <p>「尋找走塑店鋪」計劃由2018年9月至今，已招募約200位義工參與一連串社區活動、親身與餐廳店主溝通，並找到近600間走塑友善的店鋪，在這些餐廳貼上「全城走塑」貼紙，讓消費者輕鬆認出走塑店鋪。除了餐廳食店外，我們將擴大活動範圍至不同類型店鋪，如街市檔、小食店、手搖飲品店等等，希望有更多商家加入，擴大走塑版圖。</p>
+              <p>
+                <strong>我們的目標：</strong>
+                <br />2020年底前，令800間店鋪加入成為「走塑店鋪」。
+              </p>
+              <p>你的參與會帶來改變，無塑未來由你創造！請加入義工行列，並呼籲親朋好友和我們一起尋找走塑店鋪餐廳！</p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfyhY0wTqn0JdMjjvEUFS4yBQ31G0KHXhDsvZ1lUiR-XDFFQQ/viewform"
                 target="_blank"
               >
-                <button class="join-btn btn mb-0">我要成為義工</button>
+                <button class="join-btn btn mr-4">我要成為義工</button>
               </a>
-              <hr />
-              <p>走塑不只是個人的事，歡迎餐廳及店鋪負責人或團體參與走塑店鋪計劃！如果你未有時間參與活動，但發現到走塑店舖，請報料讓我們跟進！</p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSftxg-EbQSAl44hf_5g1-fVt4DJVlCjwJrEGuKxVdhM2J9aHg/viewform"
                 target="_blank"
               >
-                <button class="join-btn btn mr-4">店鋪登記</button>
+                <button class="join-btn btn">店鋪登記</button>
               </a>
+              <hr />
+              <p>走塑不只是個人的事，歡迎餐廳、店鋪負責人或團體參與走塑店鋪計劃！如有機構、團體、學校的活動策劃人，也有興趣協辦「尋找走塑店鋪計劃」活動，帶領參加者在你們所屬的地區游說更多店鋪加入走塑行列，擴大走塑版圖。可下載此小冊子，先你了解整個活動流程，再與我們商討細節。</p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLScotCS-3l8gRR5z7dh9fU_1SFYmceYG1IgvINIf8sH5a4MMsA/viewform"
                 target="_blank"
               >
-                <button class="join-btn btn mr-4">團體參與</button>
-              </a>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfFcbTQ09G08cRI_2iuKP3Z7IJqaoKaSo17FZ9s-p-d1u38vQ/viewform"
-                target="_blank"
-              >
-                <button class="join-btn btn">我要報料</button>
+                <button class="join-btn btn">團體參與</button>
               </a>
             </div>
           </div>
           <div class="col-md-6 order-md-2">
-            <h2 class="text-light-blue display-1 mb-2 font-weight-bold text-right">兩分鐘<br />看懂走塑小貼士</h2>
+            <h2 class="text-light-blue display-1 mb-2 font-weight-bold text-right">
+              兩分鐘
+              <br />看懂走塑小貼士
+            </h2>
             <div class="slick-toolkit card border-0 mt-4">
               <div
                 class="toolkit-img"
@@ -67,15 +63,10 @@
               >
                 <span class="toolkit-img__overlay"></span>
                 <span class="toolkit-img__text">{{toolkit.headline}}</span>
-                <img
-                  class="card-img-top"
-                  :src="toolkit.cover"
-                  alt=""
-                >
+                <img class="card-img-top" :src="toolkit.cover" alt />
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -91,12 +82,12 @@
               <h3 class="display-0 text-light-blue font-weight-bold">一級走塑店鋪</h3>
               <img
                 src="@/assets/images/GP_PlasticFreeStickers_grade1.png"
-                alt=""
+                alt
                 class="mt-4 img-fluid rounded-circle shadow"
-              >
+              />
               <ul class="mt-4">
+                <li>- 完全淘汰即棄塑膠 或</li>
                 <li>- 提供走塑優惠</li>
-
               </ul>
               <!--
               <p class="lead font-weight-bold">「餐廳做主動，塑膠冇得用」</p>
@@ -108,12 +99,12 @@
               <h3 class="display-0 text-light-blue font-weight-bold">二級走塑店鋪</h3>
               <img
                 src="@/assets/images/GP_PlasticFreeStickers_grade2.png"
-                alt=""
+                alt
                 class="mt-4 img-fluid rounded-circle shadow"
-              >
+              />
               <ul class="mt-4">
-                <li>- 提供走包裝的選擇；及</li>
-                <li>- 提供自備袋／器皿的選擇</li>
+                <li>- 不主動提供即棄塑膠 或</li>
+                <li>- 歡迎自備餐具 / 器皿購物</li>
               </ul>
               <!--
               <p class="lead font-weight-bold">「餐廳順你意，走塑你話事」</p>
@@ -146,6 +137,12 @@ export default {
           "https://api.greenpeace.org.hk/2018/wod/img/GP_plasticfree_restaurant_PRINT_Page_2.jpg"
       },
       toolkits: [
+        {
+          id: "poster",
+          headline: "認住藍色白色走塑貼紙",
+          cover: require("@/assets/images/community_hunt_poster.jpg"),
+          contentImage: require("@/assets/images/community_hunt_poster.jpg")
+        },
         {
           id: "restaurant",
           headline: "成為走塑友善餐廳",
