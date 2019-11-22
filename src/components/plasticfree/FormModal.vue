@@ -48,7 +48,7 @@
               @click="validate"
             >聯署支持全城走塑</v-btn>
             <v-checkbox
-              class="email-optin"
+              class="email-optin mt-4"
               v-model="moreInfo"
               label="我願意收到綠色和平發送的通訊！我並同意綠色和平按照其私隱政策與個人資料收集聲明與我保持聯絡。"
               required
@@ -136,6 +136,7 @@ export default {
         formData.append("supporter.NOT_TAGGED_46", "HK");
         formData.append("supporter.NOT_TAGGED_9", "zh");
         //
+        console.log(this.email, this.lastName, this.firstName, this.phone, this.birthYearPick, this.moreInfo);
         console.log(formData);
         //
         let res = await axios.post(
