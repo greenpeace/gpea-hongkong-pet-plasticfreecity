@@ -64,7 +64,7 @@ export default {
       },
       selected: [],
       restaurantURL:
-        "https://raw.githubusercontent.com/eahk/gpea-hongkong-pet-plasticfreecity/master/src/assets/csvjson.json",
+        "https://raw.githubusercontent.com/eahk/gpea-hongkong-pet-plasticfreecity/master/src/assets/csvjson.json?token=AMV6PZYO7MXLN5B5GNEOQGS525N34",
       restaurantList: {
         loading: true,
         tableColumns: [

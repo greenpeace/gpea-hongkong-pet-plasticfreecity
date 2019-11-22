@@ -35,7 +35,6 @@
               label="名字"
               required
             ></v-text-field>
-
             <v-text-field
               v-model="phone"
               prepend-icon="local_phone"
@@ -43,35 +42,7 @@
               label="手提號碼（23456789）"
               required
             ></v-text-field>
-
-            <v-menu
-              lazy
-              ref="menu"
-              :close-on-content-click="false"
-              v-model="dateMenu"
-              transition="scale-transition"
-              offset-y
-              full-width
-              :nudge-right="40"
-              max-width="290px"
-              min-width="290px"
-            >
-              <v-text-field
-                slot="activator"
-                label="出生年份"
-                v-model="birthdayShow"
-                prepend-icon="event"
-                readonly
-              ></v-text-field>
-              <v-date-picker
-                ref="picker"
-                v-model="birthdayPick"
-                no-title
-                reactive
-                :max="today"
-                @input="saveDatePicker"
-              ></v-date-picker>
-            </v-menu>
+            <v-select prepend-icon="event" v-model="birthYearPick" :items="birthYear" label="出生年份"></v-select>
             <v-btn
               text
               color="#53b7da"
@@ -80,7 +51,6 @@
               :block="true"
               @click="validate"
             >立即連署</v-btn>
-            
             <v-checkbox
               class="email-optin"
               v-model="moreInfo"
@@ -94,17 +64,11 @@
       <transition type="fade">
         <v-card v-if="showThankYou">
           <v-card-text>
-            <p class="display-1 text--primary">
-              Thank you
-            </p>
-            <div class="text--primary">
-              Some text here.
-            </div>
+            <p class="display-1 text--primary">Thank you</p>
+            <div class="text--primary">Some text here.</div>
           </v-card-text>
           <v-card-actions>
-            <v-btn text>
-              Share
-            </v-btn>
+            <v-btn text>Share</v-btn>
           </v-card-actions>
         </v-card>
       </transition>
@@ -113,9 +77,11 @@
   </div>
 </template>
 <script>
-import dayjs from "dayjs";
 import axios from "axios";
-
+function yearData(text, value) {
+  this.text = text;
+  this.value = value;
+}
 export default {
   data() {
     return {
@@ -152,9 +118,8 @@ export default {
           "手提號碼格式錯誤"
       ],
       moreInfo: true,
-      birthdayPick: "1990-01-01",
-      // thank you 
-      showThankYou: false,
+      birthYearPick: "",
+      showThankYou: false
     };
   },
   methods: {
@@ -166,14 +131,12 @@ export default {
     },
     async postForm() {
       try {
-        let year = dayjs(this.birthdayPick).format("DD/MM/YYYY");
-
         let formData = new URLSearchParams();
         formData.append("supporter.emailAddress", this.email);
         formData.append("supporter.lastName", this.lastName);
         formData.append("supporter.firstName", this.firstName);
         formData.append("supporter.phoneNumber", this.phone);
-        formData.append("supporter.NOT_TAGGED_6", year);
+        formData.append("supporter.NOT_TAGGED_6", this.birthYearPick);
         formData.append("supporter.questions.7275", this.moreInfo ? "Y" : "N");
         formData.append("supporter.NOT_TAGGED_46", "HK");
         formData.append("supporter.NOT_TAGGED_9", "zh");
@@ -189,29 +152,19 @@ export default {
         console.log(response);
 
         this.showThankYou = true;
-
       } catch (err) {
         console.log(err);
       }
-    },
-    saveDatePicker() {
-      this.$refs.picker.activePicker = "YEAR";
-      this.dateMenu = false;
-    }
-  },
-  watch: {
-    dateMenu(val) {
-      val && this.$nextTick(() => (this.$refs.picker.activePicker = "YEAR"));
     }
   },
   computed: {
-    birthdayShow() {
-      let showing = new Date(this.birthdayPick);
-      return showing.getFullYear();
-    },
-    today() {
-      let today = new Date().toLocaleDateString();
-      return today;
+    birthYear() {
+      const yearBegin = 1920;
+      let birthYear = [];
+      for (let i = new Date().getFullYear(); i > yearBegin; i--) {
+        birthYear.push(new yearData(i.toString(), "01/01/" + i.toString()));
+      }
+      return birthYear;
     }
   }
 };
