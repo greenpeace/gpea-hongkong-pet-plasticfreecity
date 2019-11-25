@@ -59,12 +59,11 @@
       <!-- thank you card -->
       <transition type="fade">
         <v-card v-if="showThankYou">
-          <v-card-text>
-            <p class="display-1 text--primary">感謝您的參與！</p>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn text>Share</v-btn>
-          </v-card-actions>
+          <div class="form-container">
+            <v-card-text>
+              <p class="display-1 text--primary">感謝您的參與，一起拒絕塑膠圍城。</p>
+            </v-card-text>
+          </div>
         </v-card>
       </transition>
       <!-- end thank you card -->
@@ -135,9 +134,6 @@ export default {
         formData.append("supporter.questions.7275", this.moreInfo ? "Y" : "N");
         formData.append("supporter.NOT_TAGGED_46", "HK");
         formData.append("supporter.NOT_TAGGED_9", "zh");
-        //
-        console.log(this.email, this.lastName, this.firstName, this.phone, this.birthYearPick, this.moreInfo);
-        console.log(formData);
         //
         let res = await axios.post(
           "https://act.greenpeace.org/page/25142/petition/2",

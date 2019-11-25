@@ -89,9 +89,6 @@
                 <li>- 完全淘汰即棄塑膠 或</li>
                 <li>- 提供走塑優惠</li>
               </ul>
-              <!--
-              <p class="lead font-weight-bold">「餐廳做主動，塑膠冇得用」</p>
-              -->
             </div>
           </div>
           <div class="col-md-6">
@@ -106,9 +103,6 @@
                 <li>- 不主動提供即棄塑膠 或</li>
                 <li>- 歡迎自備餐具 / 器皿購物</li>
               </ul>
-              <!--
-              <p class="lead font-weight-bold">「餐廳順你意，走塑你話事」</p>
-              -->
             </div>
           </div>
         </div>
@@ -288,5 +282,11 @@ export default {
   ul {
     list-style: none;
   }
+}
+
+hr {
+  height: 1px;
+  border-top: 1px solid #ccc;
+  padding: 1px;
 }
 </style>
