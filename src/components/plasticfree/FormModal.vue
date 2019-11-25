@@ -15,7 +15,6 @@
               label="電郵地址"
               required
             ></v-text-field>
-
             <v-text-field
               v-model="lastName"
               prepend-icon="person"
@@ -23,7 +22,6 @@
               label="姓氏"
               required
             ></v-text-field>
-
             <v-text-field
               v-model="firstName"
               prepend-icon="person"
@@ -61,7 +59,14 @@
         <v-card v-if="showThankYou">
           <div class="form-container">
             <v-card-text>
-              <p class="display-1 text--primary">感謝您的參與，一起拒絕塑膠圍城。</p>
+              <p class="display-2 text--primary">感謝您的參與！</p>
+              <p class="mt-2">你的參與會帶來改變，無塑未來由你創造！</p>
+              <a
+                href="https://act.greenpeace.org/page/4663/donate/1?campaign=plastic&amp;ref=2018-plasticfreecity-thankyou_page"
+                target="_blank"
+              >
+                <button class="btn main-btn mt-4">支持我們</button>
+              </a>
             </v-card-text>
           </div>
         </v-card>
@@ -123,6 +128,22 @@ export default {
         this.postForm();
       }
     },
+    conversion() {
+      window.dataLayer = window.dataLayer || [];
+      //
+      dataLayer.push({
+        event: "gaEvent",
+        eventCategory: "petitions",
+        eventAction: "signup",
+        eventLabel: "2018-plasticfreecity",
+        eventValue: undefined
+      });
+      dataLayer.push({
+        event: "fbqEvent",
+        contentName: "2018-plasticfreecity",
+        contentCategory: "Petition Signup"
+      });
+    },
     async postForm() {
       try {
         let formData = new URLSearchParams();
@@ -144,6 +165,8 @@ export default {
         console.log(response);
 
         this.showThankYou = true;
+        //
+        this.conversion();
       } catch (err) {
         console.log(err);
       }

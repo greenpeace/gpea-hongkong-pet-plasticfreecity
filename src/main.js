@@ -1,17 +1,17 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
 // App.vue
-import Vuetify from 'vuetify'
-Vue.use(Vuetify)
-import VueMeta from 'vue-meta'
-Vue.use(VueMeta)
+import Vuetify from "vuetify";
+Vue.use(Vuetify);
+import VueMeta from "vue-meta";
+Vue.use(VueMeta);
 // Vuetify
-import Plugins from './plugins/plugins'
-Vue.use(Plugins)
+import Plugins from "./plugins/plugins";
+Vue.use(Plugins);
 // Plugins
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 //
 
 new Vue({
@@ -19,48 +19,48 @@ new Vue({
   store,
   metaInfo: {
     htmlAttrs: {
-      lang: 'zh',
+      lang: "zh"
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" }
     ],
     link: [
       {
-        rel: 'shortcut icon',
+        rel: "shortcut icon",
         href:
-          'https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1853/gp-favicon.png?v=1550651064000',
+          "https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1853/gp-favicon.png?v=1550651064000"
       },
       {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '96x96',
+        rel: "icon",
+        type: "image/png",
+        sizes: "96x96",
         href:
-          'https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1853/gp-favicon.png?v=1550651064000',
+          "https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/1853/gp-favicon.png?v=1550651064000"
       },
-      { rel: 'favicon', href: 'favicon.ico' },
+      { rel: "favicon", href: "favicon.ico" },
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Material+Icons',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css',
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Material+Icons"
       },
       {
-        rel: 'stylesheet',
+        rel: "stylesheet",
         href:
-          'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css',
+          "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
       },
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+      }
     ],
     script: [
       {
         src:
-          'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js',
+          "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js",
         async: false,
-        defer: false,
-      },
+        defer: false
+      }
     ],
     style: [
       {
@@ -120,7 +120,7 @@ new Vue({
         list-style-position: outside;
         list-style-type: disc;
       }`,
-        type: 'text/css',
+        type: "text/css"
       },
       {
         cssText: `.slick-track {
@@ -137,15 +137,15 @@ new Vue({
       .slick-center {
         opacity: 1;
       }`,
-        type: 'text/css',
-      },
+        type: "text/css"
+      }
     ],
     noscript: [
       {
         innerHTML:
-          '請啟用瀏覽器的JavaScript功能，以便正確顯示此頁面。啟用後，請重新載入頁面。',
-      },
-    ],
+          "請啟用瀏覽器的JavaScript功能，以便正確顯示此頁面。啟用後，請重新載入頁面。"
+      }
+    ]
   },
-  render: h => h(App),
-}).$mount('#app')
+  render: h => h(App)
+}).$mount("#app");
