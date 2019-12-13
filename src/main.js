@@ -13,6 +13,13 @@ Vue.use(Plugins);
 // Plugins
 Vue.config.productionTip = false;
 //
+import VueLazyload from "vue-lazyload";
+Vue.use(VueLazyload, {
+  lazyComponent: true
+});
+
+import '@/styles/scss/main.scss'
+
 
 new Vue({
   router,

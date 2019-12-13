@@ -17,8 +17,8 @@
 </template>
 <script>
 import { FadeTransition } from "vue2-transitions";
-import AppHeader from "@/components/basic/AppHeader";
-import AppFooter from "@/components/basic/AppFooter";
+import AppHeader from "@/components/AppHeader";
+import AppFooter from "@/components/AppFooter";
 export default {
   components: {
     FadeTransition,

@@ -32,7 +32,7 @@ module.exports = {
     loaderOptions: {
       sass: {
         data: `
-          @import "@/assets/styles/global.scss";
+          @import "@/styles/scss/global.scss";
         `,
       },
     },
