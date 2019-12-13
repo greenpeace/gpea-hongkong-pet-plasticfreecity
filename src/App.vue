@@ -16,14 +16,13 @@
   </div>
 </template>
 <script>
-import { FadeTransition } from "vue2-transitions";
 import AppHeader from "@/components/AppHeader";
 import AppFooter from "@/components/AppFooter";
 export default {
   components: {
-    FadeTransition,
     AppHeader,
     AppFooter
   }
 };
 </script>
+<style lang="scss"></style>

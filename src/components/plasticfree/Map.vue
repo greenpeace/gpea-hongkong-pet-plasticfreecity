@@ -33,10 +33,13 @@
 <style lang="scss" scoped>
 .map-responsive {
   overflow: hidden;
-  padding-top: 56.25%;
   position: relative;
   height: 0;
   overflow: hidden;
+  @include for-mobile-only {
+    padding-top: 75vh;
+  }
+  padding-top: 56.25%;
 }
 .map-responsive iframe {
   border: none;

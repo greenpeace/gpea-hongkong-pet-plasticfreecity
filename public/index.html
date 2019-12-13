@@ -4,16 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
     </script>
     <script>
       dataLayer.push({
-        officeName: 'Hong Kong',
-        gBasket: 'Good Life',
-        gCampaign: 'Plastics Free Future',
-        gScope: 'Global',
-        gDepartment: 'Campaign',
-      })
+        officeName: "Hong Kong",
+        gBasket: "Good Life",
+        gCampaign: "Plastics Free Future",
+        gScope: "Global",
+        gDepartment: "Campaign"
+      });
     </script>
     <style>
       .async-hide {
@@ -21,31 +21,31 @@
       }
     </style>
     <script>
-      ;(function(a, s, y, n, c, h, i, d, e) {
-        s.className += ' ' + y
+      (function(a, s, y, n, c, h, i, d, e) {
+        s.className += " " + y;
         h.end = i = function() {
-          s.className = s.className.replace(RegExp(' ?' + y), '')
-        }
-        ;(a[n] = a[n] || []).hide = h
+          s.className = s.className.replace(RegExp(" ?" + y), "");
+        };
+        (a[n] = a[n] || []).hide = h;
         setTimeout(function() {
-          i()
-          h.end = null
-        }, c)
-      })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
-        'GTM-M6LZL75': true,
-      })
+          i();
+          h.end = null;
+        }, c);
+      })(window, document.documentElement, "async-hide", "dataLayer", 4000, {
+        "GTM-M6LZL75": true
+      });
     </script>
     <script>
-      ;(function(w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-M6LZL75')
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-M6LZL75");
     </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>全城走塑，讓香港不一樣 - Greenpeace 綠色和平 | 香港</title>
@@ -88,15 +88,15 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <script>
-      ;(function(d, s, id) {
+      (function(d, s, id) {
         var js,
-          fjs = d.getElementsByTagName(s)[0]
-        if (d.getElementById(id)) return
-        js = d.createElement(s)
-        js.id = id
-        js.src = 'https://connect.facebook.net/zh_HK/sdk/xfbml.customerchat.js'
-        fjs.parentNode.insertBefore(js, fjs)
-      })(document, 'script', 'facebook-jssdk')
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/zh_HK/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
     </script>
     <!-- Your customer chat code -->
     <div
@@ -142,14 +142,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script>
       $(document).ready(function() {
-        $('.slick-toolkit').slick({
+        $(".slick-toolkit").slick({
           arrows: false,
           autoplay: true,
           centerMode: true,
           slidesToShow: 1,
-          mobileFirst: true,
-        })
-      })
+          mobileFirst: true
+        });
+      });
     </script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://change.greenpeace.org.hk/vendor/argon-design/assets/css/argon-design-system.min.css"
+    />
   </body>
 </html>

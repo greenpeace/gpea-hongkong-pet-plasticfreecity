@@ -11,14 +11,16 @@ Vue.use(VueMeta);
 import Plugins from "./plugins/plugins";
 Vue.use(Plugins);
 // Plugins
-Vue.config.productionTip = false;
 //
 import VueLazyload from "vue-lazyload";
 Vue.use(VueLazyload, {
   lazyComponent: true
 });
-
+//
 import '@/styles/scss/main.scss'
+//
+Vue.config.productionTip = false;
+//
 
 
 new Vue({
