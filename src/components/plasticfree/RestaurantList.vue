@@ -23,6 +23,8 @@
           :pagination.sync="pagination"
           :expand="true"
           class="restaurant-list"
+          loading
+          loading-text="Loading..."
           item-key="name"
         >
           <template slot="items" slot-scope="props">

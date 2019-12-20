@@ -39,9 +39,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .iframe-container {
   position: relative;
+  overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  height: 0;
   overflow: hidden;
   padding-top: 56.25%;
 }
