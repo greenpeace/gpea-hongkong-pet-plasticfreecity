@@ -9,7 +9,7 @@
         <v-card-title>
           <v-layout row wrap align-center justify-space-between>
             <v-flex class="px-4" md4 xs6>
-              <v-select label="地區" :items="['港島', '九龍', '新界']" v-model="districtSelected"></v-select>
+              <v-select label="區域" :items="['香港', '九龍', '新界']" v-model="districtSelected"></v-select>
             </v-flex>
             <v-flex class="px-4" md4 xs6>
               <v-text-field v-model="search" append-icon="search" label="搜尋" single-line></v-text-field>
@@ -23,8 +23,6 @@
           :pagination.sync="pagination"
           :expand="true"
           class="restaurant-list"
-          loading
-          loading-text="Loading..."
           item-key="name"
         >
           <template slot="items" slot-scope="props">
@@ -62,7 +60,7 @@ export default {
       search: "",
       pagination: {
         rowsPerPage: 10,
-        sortBy: "地區"
+        sortBy: "區域"
       },
       selected: [],
       restaurantURL:
@@ -71,8 +69,8 @@ export default {
         loading: true,
         tableColumns: [
           {
-            text: "地區",
-            value: "地區",
+            text: "區域",
+            value: "區域",
             align: "center"
           },
           {
@@ -118,7 +116,7 @@ export default {
       .then(res => {
         const resList = res.data
           .filter(list => list.stamped === "Y")
-          .sort((a, b) => (a.地區 > b.地區 ? 1 : -1));
+          .sort((a, b) => (a.區域 > b.區域 ? 1 : -1));
         //
         for (let key in resList) {
           this.restaurantList.tableData.push(resList[key]);
