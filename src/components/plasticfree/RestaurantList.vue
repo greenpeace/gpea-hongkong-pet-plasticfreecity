@@ -5,11 +5,11 @@
         <h2 class="display-1 mb-2 text-light-blue font-weight-bold">尋找走塑食堂的成果</h2>
         <p>現時走塑食堂已遍佈港九新界離島，總有一間在你附近</p>
       </header>
-      <v-card class="restaurant-card">
+      <v-card class="restaurant-card py-4">
         <v-card-title>
           <v-layout row wrap align-center justify-space-between>
             <v-flex class="px-4" md4 xs6>
-              <v-select label="區域" :items="['香港', '九龍', '新界']" v-model="districtSelected"></v-select>
+              <v-select label="區域" :items="['香港', '九龍', '新界', '']" v-model="districtSelected"></v-select>
             </v-flex>
             <v-flex class="px-4" md4 xs6>
               <v-text-field v-model="search" append-icon="search" label="搜尋" single-line></v-text-field>
@@ -27,7 +27,7 @@
         >
           <template slot="items" slot-scope="props">
             <tr class="text-xs-center" @click="props.expanded = !props.expanded">
-              <td class="text-xs-center">{{ props.item.地區 }}</td>
+              <td class="text-xs-center">{{ props.item.區域 }}</td>
               <td class="text-xs-center">{{ props.item.餐廳名稱 }}</td>
               <td class="text-xs-center restaurant-list__address">{{ props.item.餐廳地址 }}</td>
               <td class="text-xs-center">{{ props.item.堂食走塑等級 }}</td>
@@ -49,7 +49,8 @@
   </section>
 </template>
 <script>
-import axios from "axios";
+import restaurantList from "@/assets/csvjson.json";
+// import axios from "axios";
 // import the styles
 export default {
   data() {
@@ -103,7 +104,7 @@ export default {
     filteredItems() {
       if (this.districtSelected && this.districtSelected.length > 0) {
         return this.restaurantList.tableData.filter(i => {
-          return i.地區 === this.districtSelected;
+          return i.區域 === this.districtSelected;
         });
       } else {
         return this.restaurantList.tableData;
@@ -111,22 +112,27 @@ export default {
     }
   },
   created() {
+    /*
     axios
       .get(this.restaurantURL)
+      .get("../../assets/csvjson.json")
       .then(res => {
-        const resList = res.data
-          .filter(list => list.stamped === "Y")
-          .sort((a, b) => (a.區域 > b.區域 ? 1 : -1));
-        //
-        for (let key in resList) {
-          this.restaurantList.tableData.push(resList[key]);
-        }
-        //
-        this.restaurantList.loading = false;
+
       })
       .catch(function(error) {
         console.log(error);
       });
+      */
+    console.log(restaurantList);
+    const resList = restaurantList
+      .filter(list => list.stamped === "Y")
+      .sort((a, b) => (a.區域 > b.區域 ? 1 : -1));
+    //
+    for (let key in resList) {
+      this.restaurantList.tableData.push(resList[key]);
+    }
+    //
+    this.restaurantList.loading = false;
   },
   methods: {
     toggleOrder() {
