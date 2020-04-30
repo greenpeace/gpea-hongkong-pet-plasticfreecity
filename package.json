@@ -12,7 +12,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^3.4.0",
     "dayjs": "^1.8.16",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lodash.merge": "^4.6.2",
     "nouislider": "^13.1.5",
     "scrollto-with-animation": "^4.5.4",
