@@ -20,7 +20,7 @@
           <i class="material-icons">menu</i>
         </button>
       </div>
-      <div class="header__item header__item--form-btn">
+      <div class="header__item header__item--form-btn" style="display: none;">
         <form-modal></form-modal>
       </div>
     </div>
