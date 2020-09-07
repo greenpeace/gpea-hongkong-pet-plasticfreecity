@@ -36,7 +36,12 @@
               label="手提號碼（23456789）"
               required
             ></v-text-field>
-            <v-select prepend-icon="event" v-model="birthYearPick" :items="birthYear" label="出生年份"></v-select>
+            <v-select
+              prepend-icon="event"
+              v-model="birthYearPick"
+              :items="birthYear"
+              label="出生年份"
+            ></v-select>
             <v-btn
               text
               color="#53b7da"
@@ -44,7 +49,8 @@
               :large="true"
               :block="true"
               @click="validate"
-            >聯署支持全城走塑</v-btn>
+              >聯署支持全城走塑</v-btn
+            >
             <v-checkbox
               class="email-optin mt-4"
               v-model="moreInfo"
@@ -81,6 +87,9 @@ function yearData(text, value) {
   this.text = text;
   this.value = value;
 }
+//
+window.dataLayer = window.dataLayer || [];
+//
 export default {
   data() {
     return {
@@ -95,30 +104,30 @@ export default {
       valid: true,
       lastName: "",
       lastNameRules: [
-        v => !!v || "請輸入姓氏",
-        v => this.regexName.test(v) || "姓氏格式錯誤"
+        (v) => !!v || "請輸入姓氏",
+        (v) => this.regexName.test(v) || "姓氏格式錯誤",
       ],
       firstName: "",
       firstNameRules: [
-        v => !!v || "請輸入名字",
-        v => this.regexName.test(v) || "名字格式錯誤"
+        (v) => !!v || "請輸入名字",
+        (v) => this.regexName.test(v) || "名字格式錯誤",
       ],
       email: "",
       emailRules: [
-        v => !!v || "請輸入電郵地址",
-        v => this.regexEmail.test(v) || "電郵地址格式錯誤"
+        (v) => !!v || "請輸入電郵地址",
+        (v) => this.regexEmail.test(v) || "電郵地址格式錯誤",
       ],
       phone: "",
       phoneRules: [
-        v => !!v || "請輸入手提號碼",
-        v =>
+        (v) => !!v || "請輸入手提號碼",
+        (v) =>
           this.regexPhone.test(v) ||
           // this.regexMobile.test(v) ||
-          "手提號碼格式錯誤"
+          "手提號碼格式錯誤",
       ],
       moreInfo: true,
       birthYearPick: "",
-      showThankYou: false
+      showThankYou: false,
     };
   },
   methods: {
@@ -129,19 +138,17 @@ export default {
       }
     },
     conversion() {
-      window.dataLayer = window.dataLayer || [];
-      //
-      dataLayer.push({
+      window.dataLayer.push({
         event: "gaEvent",
         eventCategory: "petitions",
         eventAction: "signup",
-        eventLabel: "2018-plasticfreecity",
-        eventValue: undefined
+        eventLabel: "2020-plasticfreecity",
+        eventValue: undefined,
       });
-      dataLayer.push({
+      window.dataLayer.push({
         event: "fbqEvent",
-        contentName: "2018-plasticfreecity",
-        contentCategory: "Petition Signup"
+        contentName: "2020-plasticfreecity",
+        contentCategory: "Petition Signup",
       });
     },
     async postForm() {
@@ -170,7 +177,7 @@ export default {
       } catch (err) {
         console.log(err);
       }
-    }
+    },
   },
   computed: {
     birthYear() {
@@ -180,8 +187,8 @@ export default {
         birthYear.push(new yearData(i.toString(), "01/01/" + i.toString()));
       }
       return birthYear;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

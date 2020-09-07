@@ -1,40 +1,16 @@
 module.exports = {
   publicPath:
-    process.env.NODE_ENV === 'production'
-      ? 'https://api.greenpeace.org.hk/2019/plasticfreecity/'
-      : '/',
-  configureWebpack: config => {
-    config.output.filename = 'js/[name].js'
-    config.output.chunkFilename = 'js/[name].js'
-  },
-  chainWebpack: config => {
-    const svgRule = config.module.rule('svg')
-    // clear all existing loaders.
-    // if you don't do this, the loader below will be appended to
-    // existing loaders of the rule.
-    svgRule.uses.clear()
-    // add replacement loader(s)
-    svgRule.use('vue-svg-loader').loader('vue-svg-loader')
-    //
-    if (config.plugins.has('extract-css')) {
-      const extractCSSPlugin = config.plugin('extract-css')
-      extractCSSPlugin &&
-        extractCSSPlugin.tap(() => [
-          {
-            filename: 'css/[name].css',
-            chunkFilename: 'css/[name].css',
-          },
-        ])
-    }
-  },
+    process.env.NODE_ENV === "production"
+      ? "https://api.greenpeace.org.hk/2020/petition/zh-hk.2020.plastics.plasticfreecity.general.signup.na.mc/"
+      : "/",
   css: {
-    sourceMap: process.env.NODE_ENV !== 'production' ? true : false,
+    sourceMap: process.env.NODE_ENV !== "production" ? true : false,
     loaderOptions: {
       sass: {
         data: `
-          @import "@/assets/styles/global.scss";
+          @import "@/styles/scss/global.scss";
         `,
       },
     },
   },
-}
+};
